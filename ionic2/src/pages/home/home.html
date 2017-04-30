@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Test
+    </ion-title>
+ 		<ion-title>
+		Devices
+		</ion-title>
+
+		<ion-buttons end>
+		<button onclick = "startScanning()" >Scan</button>
+		</ion-buttons>
+ </ion-navbar>
+  
+</ion-header>
+
+	<ion-content>
+
+	
+		<ion-list inset>
+			<ion-item-sliding *ngFor="" #slidingItem>
+				<button ion-item (click)="connectToDevice(device)">
+					<h2>{{device.name}}</h2>
+					<p>{{device.id}}</p>
+					<p>{{device.rssi}}</p>
+				</button>
+
+			</ion-item-sliding>
+		</ion-list>
+	</ion-content>
